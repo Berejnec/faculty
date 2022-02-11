@@ -1,0 +1,49 @@
+************* e:\ewb512\sau-nu2.ewb **************
+*  Interactive Image Technologies                *
+*                                                *
+*  This File was created by:                     *
+*    Electronics Workbench to SPICE netlist      *
+*    conversion DLL                              *
+*                                                *
+*  Thu Jun 18 08:42:24 2020                      *
+**************************************************
+
+* Capacitor(s)
+* 
+Cp 0 2 50n
+
+* 3-Terminal Enhancement N-MOSFET(s)
+* 
+M_N_EM_Q4 2 4 0 0 NMEideal
+* 
+M_N_EM_Q3 2 5 0 0 NMEideal
+
+* 3-Terminal Enhancement P-MOSFET(s)
+* 
+M_P_EM_Q1 3 4 1 1 PMEideal
+* 
+M_P_EM_Q2 1 5 2 2 PMEideal
+
+* Connector(s)
+* node = 1, label = 
+* node = 5, label = 
+* node = 2, label = 
+* node = 2, label = 
+* node = 3, label = 
+* node = 1, label = 
+* node = 0, label = 
+* node = 3, label = 
+
+* Misc
+.MODEL NMEideal NMOS(VTO=0 KP=20u LAMBDA=0 PHI=600m GAMMA=0 Rd=0 Rs=0
++IS=10f Cgbo=0 Cgdo=0 Cgso=0 Cbd=0 Cbs=0 PB=800m RSH=0 CJ=0 MJ=500m CJSW=0
++MJSW=500m JS=0 TOX=100n NSUB=0 NSS=0 TPG=1 LD=0 U0=600 KF=0 AF=1 FC=500m
++TNOM=27)
+
+.MODEL PMEideal PMOS(VTO=0 KP=20u LAMBDA=0 PHI=600m GAMMA=0 Rd=0 Rs=0
++IS=10f Cgbo=0 Cgdo=0 Cgso=0 Cbd=0 Cbs=0 PB=800m RSH=0 CJ=0 MJ=500m CJSW=0
++MJSW=500m JS=0 TOX=100n NSUB=0 NSS=0 TPG=1 LD=0 U0=600 KF=0 AF=1 FC=500m
++TNOM=27)
+
+.OPTIONS ITL4=25
+.END

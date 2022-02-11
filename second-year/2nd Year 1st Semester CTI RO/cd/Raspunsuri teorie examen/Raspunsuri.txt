@@ -1,0 +1,4 @@
+1-Cum trebuie dpdv teoretic polarizate cele 2 jonctiuni ca un tranzistor bipolar sa fie considerat in regim activ?
+- jonctiunea emitor-baza este polarizata direct, iar jonctiunea colector-baza invers. (?)
+2-Ce rol are capacitatea de accelerare?
+- Are rolul de a mari viteza de extragere a purtatorilor minoritari din baza (?) 
