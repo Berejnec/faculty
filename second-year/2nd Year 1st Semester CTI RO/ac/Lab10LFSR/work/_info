@@ -1,0 +1,84 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\ModelSim\Projects
+vBIST
+!s100 3dSLggmRdSHO3ZQ_7fI3Q0
+I0mCML>C;]7_KZFW4=XGoz0
+V1jKKY<z3Sd?nB>dh@X?G80
+w1639259695
+8D:/ModelSim/Projects/BIST.v
+FD:/ModelSim/Projects/BIST.v
+L0 1
+Z1 OV;L;6.5b;42
+r1
+!s85 0
+31
+!s101 -O0
+Z2 !s102 -nocovercells
+Z3 o-work work -nocovercells -O0
+n@b@i@s@t
+vdff_ar
+IP@6PQY:kagMhFV:[Z1D:U2
+Vo3TMNndZ?bn>K7:;KE_192
+w1639259470
+8D:/ModelSim/Projects/DFF_AR_SET.v
+FD:/ModelSim/Projects/DFF_AR_SET.v
+L0 1
+R1
+r1
+31
+R3
+R2
+!s100 oL>Hd2h3Q<31?h9[;8@>>2
+!s85 0
+!s101 -O0
+vLFSR
+IdXg[lS=mQb:obg`]KoXlM3
+V::IGMeWU>g_6[haoCHJ790
+w1639259560
+8D:/ModelSim/Projects/LFSR.v
+FD:/ModelSim/Projects/LFSR.v
+L0 1
+R1
+r1
+31
+R2
+R3
+n@l@f@s@r
+!s100 WW[iPZ]F_<KGT@gU[51^T2
+!s85 0
+!s101 -O0
+vMUL3
+I?gbEVR7Rh]onTG7X8=>1P0
+VOAeGcni5L52_]A9io?R7=2
+w1639259649
+8D:/ModelSim/Projects/MUL3.v
+FD:/ModelSim/Projects/MUL3.v
+L0 1
+R1
+r1
+31
+R2
+R3
+n@m@u@l3
+!s100 fEDjYhB56Bh07]5PbSF@C1
+!s85 0
+!s101 -O0
+vSISR
+IfkgVehmC<_F>884R3[QQ01
+Vi@?Acbb>a0CCkgejzBS]31
+w1639259591
+8D:/ModelSim/Projects/SISR.v
+FD:/ModelSim/Projects/SISR.v
+L0 1
+R1
+r1
+31
+R2
+R3
+n@s@i@s@r
+!s100 fE@k`nI2F1A_UMG5;bZUC2
+!s85 0
+!s101 -O0

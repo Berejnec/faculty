@@ -1,0 +1,11 @@
+module multiply_by_14_tb(
+output reg [13:0] i,
+output [23:0] o);
+
+initial begin
+
+i=5'b10100;
+
+end
+
+endmodule

@@ -1,0 +1,24 @@
+module function(
+input [3:0] s,
+input [15:0] i,
+output o);
+
+initial begin 
+i=15'b011110000001101;
+
+if(s[3]==1'b1)
+begin
+mux_3s_1b m1 (
+.s(s[2:0]),
+.i(15:8] i),
+.o(o));
+end
+else
+begin
+mux_3s_1b m2 (
+.s(s[2:0]),
+.i(7:0] i),
+.o(o));
+end
+end
+endmodule

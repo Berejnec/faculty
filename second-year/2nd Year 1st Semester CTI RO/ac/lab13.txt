@@ -1,0 +1,301 @@
+module UnitateControl(
+  input bgn,clk,rst_b,
+  input [3:0] itr,
+  output ld,init,fin
+  );
+  
+  reg [2:0]st;
+  
+  wire [2:0]st_next;
+  
+  assign st_next[0] = (st[0]&~bgn)|(st[2]);                   //wait
+  assign st_next[1] = (st[0]&bgn)|(st[1]&(itr != 4'd15));     //exec
+  assign st_next[2] = (st[1]&(itr == 4'd15));                 //end
+  
+  assign ld = (st[0]&bgn)|(st[1]);
+  assign init = (st[0]&bgn);
+  assign fin = st[2];
+  
+  always @(posedge clk, negedge rst_b) begin
+    if(!rst_b)
+      st <= 3'b001;
+    else
+      st <= st_next; 
+    
+  end
+  
+endmodule
+
+///////////////////////////////////////////
+module rgst16b(
+  input clk, rst_b, ld, clr,
+  input [15:0] d,
+  output reg [15:0] q
+  );
+  
+  always @(posedge clk, negedge rst_b) begin
+      if(!rst_b)
+        q<=16'b0;
+      else if(clr) 
+        q<=16'b0;
+      else if(ld)
+        q<=d;
+    
+    
+  end
+  
+endmodule
+
+/////////////////////////////////
+
+module mux16b(
+  input s,
+  input [15:0] d0,d1,
+  output [15:0] o
+  );
+  
+assign o = s?d1:d0;
+
+endmodule
+//////////////////////////////////////
+
+module counter(
+  input clk, rst_b, c_up, clr,
+  output reg [3:0] out
+  );
+  
+  always @(posedge clk, negedge rst_b) begin
+      if(!rst_b)
+        out <= 4'b0;
+      else if(clr) 
+        out <= 4'b0;
+      else if(c_up)
+        out <= out+1;
+    
+  end
+  
+endmodule
+
+
+//////////////////////////////////////
+
+module arshift(
+  input [15:0]in,
+  input [3:0]amount,
+  output [15:0]o
+  );
+  
+  
+  assign o = in>>>amount;
+  
+  
+endmodule
+
+///////////////////////////////////////////
+
+module add_sub(
+  input [15:0] x,y,
+  input sub,
+  output [15:0]z  
+  );
+  
+  assign z = sub?(x-y):(x+y);
+  
+endmodule
+////////////////////////////////////////////
+
+module atan_ROM(
+    input [3:0] itr,
+    output reg [15:0]atan
+  );
+  
+  always @(*) begin
+    case (itr)
+      4'd0: atan = 16'h3244;
+      4'd1: atan = 16'h1dac;
+      4'd2: atan = 16'h0fae;
+      4'd3: atan = 16'h07f5;
+      4'd4: atan = 16'h03ff;
+      4'd5: atan = 16'h0200;
+      4'd6: atan = 16'h0100;
+      4'd7: atan = 16'h0080;
+      4'd8: atan = 16'h0040;
+      4'd9: atan = 16'h0020;
+      4'd10: atan = 16'h0010;
+      4'd11: atan = 16'h0008;
+      4'd12: atan = 16'h0004;
+      4'd13: atan = 16'h0002;
+      4'd14: atan = 16'h0001;
+      4'd15: atan = 16'h0000;   
+    
+    
+    endcase
+  end
+  
+endmodule
+//////////////////////////////////////////////////////////////
+module CORDIC(
+  input bgn, clk, rst_b,
+  input [15:0]theta,
+  output fin,
+  output [15:0]cos
+  );
+  
+  wire [3:0] itr;
+  wire init,ld;
+  wire [15:0]out_lmux,out_mmux,out_rmux;
+  wire [15:0]x_nxt,y_nxt,z_nxt;
+  wire [15:0] x_out, y_out, z_out;
+  
+  wire [15:0] x_to_y,y_to_x;
+  wire [15:0] atan;
+  
+  assign cos = x_out;
+  
+  UnitateControl cu(
+    .clk(clk),
+    .rst_b(rst_b),
+    .bgn(bgn),
+    .itr(itr),
+    .init(init),
+    .ld(ld),
+    .fin(fin)
+  );
+  
+  counter cntr(
+    .clk(clk),
+    .rst_b(rst_b),
+    .clr(init),
+    .c_up(ld),
+    .out(itr)
+  );
+  
+  
+  mux16b leftmux(
+    .s(init),
+    .d0(x_nxt),
+    .d1(16'h26dd),
+    .o(out_lmux)  
+  );
+  
+  mux16b midmux(
+    .s(init),
+    .d0(y_nxt),
+    .d1(16'b0),
+    .o(out_mmux)  
+  );
+  
+  mux16b rightmux(
+    .s(init),
+    .d0(z_nxt),
+    .d1(theta),
+    .o(out_rmux)  
+  );
+rgst16b xreg(
+    .clk(clk),
+    .rst_b(rst_b),
+    .ld(ld),
+    .clr(1'b0),
+    .d(out_lmux),
+    .q(x_out)
+  );
+  
+  
+  rgst16b yreg(
+    .clk(clk),
+    .rst_b(rst_b),
+    .ld(ld),
+    .clr(1'b0),
+    .d(out_mmux),
+    .q(y_out)
+  );
+  
+  
+  rgst16b zreg(
+    .clk(clk),
+    .rst_b(rst_b),
+    .ld(ld),
+    .clr(1'b0),
+    .d(out_rmux),
+    .q(z_out)
+  );
+  
+  
+  arshift xshift(
+    .in(x_out),
+    .amount(itr),
+    .o(x_to_y)
+  );
+  
+  arshift yshift(
+    .in(y_out),
+    .amount(itr),
+    .o(y_to_x)
+  );
+  
+  add_sub x_add_sub(
+    .x(y_to_x),
+    .y(x_out),
+    .sub(~z_out[15]),
+    .z(x_nxt)
+  );
+  
+  
+  add_sub y_add_sub(
+    .x(x_to_y),
+    .y(y_out),
+    .sub(z_out[15]),
+    .z(y_nxt)
+  );
+add_sub z_add_sub(
+    .x(atan),
+    .y(z_out),
+    .sub(~z_out[15]),
+    .z(z_nxt)
+  );
+  
+  atan_ROM atan_const(
+    .itr(itr),
+    .atan(atan)
+  );
+  
+endmodule
+
+///////////////////////////////////////////////
+module CORDIC_tb(
+  output reg bgn, clk, rst_b,
+  output reg [15:0]theta,
+  output fin,
+  output [15:0]cos
+  );
+
+CORDIC cor(
+  .bgn(bgn), .clk(clk), .rst_b(rst_b),
+  .theta(theta),
+  .fin(fin),
+  .cos(cos)
+
+);
+
+
+initial begin
+  clk = 1'b0;
+  forever #20 clk = ~clk;
+end
+
+initial begin
+  rst_b = 1'b0;
+  #5 rst_b = 1'b1;
+end
+
+
+initial begin
+  bgn = 1'b0;
+  theta = 16'h0000;
+  #15 bgn = 1'b1;
+end
+
+
+
+endmodule
+

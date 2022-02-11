@@ -1,0 +1,36 @@
+D:/ModelSim/Projects/MUL3.v {1 {vlog -work work -nocovercells D:/ModelSim/Projects/MUL3.v
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module MUL3
+
+Top level modules:
+	MUL3
+
+} {} {}} D:/ModelSim/Projects/SISR.v {1 {vlog -work work -nocovercells D:/ModelSim/Projects/SISR.v
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module SISR
+
+Top level modules:
+	SISR
+
+} {} {}} D:/ModelSim/Projects/DFF_AR_SET.v {1 {vlog -work work -nocovercells D:/ModelSim/Projects/DFF_AR_SET.v
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module dff_ar
+
+Top level modules:
+	dff_ar
+
+} {} {}} D:/ModelSim/Projects/BIST.v {1 {vlog -work work -nocovercells D:/ModelSim/Projects/BIST.v
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module BIST
+
+Top level modules:
+	BIST
+
+} {} {}} D:/ModelSim/Projects/LFSR.v {1 {vlog -work work -nocovercells D:/ModelSim/Projects/LFSR.v
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module LFSR
+
+Top level modules:
+	LFSR
+
+} {} {}}
