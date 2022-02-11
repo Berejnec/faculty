@@ -1,0 +1,285 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "LabSDA",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA-Debug-85fa45b9b765d9f35481.json",
+					"name" : "LabSDA",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_Lists::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_Lists-Debug-8d6401e4d9916c99e360.json",
+					"name" : "LabSDA_Lists",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_MetodaCordicAC::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_MetodaCordicAC-Debug-90c92bde3e4d9f155d77.json",
+					"name" : "LabSDA_MetodaCordicAC",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_TemaOptionala::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_TemaOptionala-Debug-9d9ab861696c8cd47be8.json",
+					"name" : "LabSDA_TemaOptionala",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_VPLListe::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_VPLListe-Debug-1e4a89d122bac9dfc867.json",
+					"name" : "LabSDA_VPLListe",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_VPLrecursivitate::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_VPLrecursivitate-Debug-f8a39aaf9be31f5c76e5.json",
+					"name" : "LabSDA_VPLrecursivitate",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_agenda::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_agenda-Debug-1d5fb5506b3e65454c0b.json",
+					"name" : "LabSDA_agenda",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_angajati::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_angajati-Debug-ee8bc317f1f7f015b411.json",
+					"name" : "LabSDA_angajati",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_aoc1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_aoc1-Debug-e22ce35126589067f209.json",
+					"name" : "LabSDA_aoc1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_conexiune::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_conexiune-Debug-e23ec5486fad30d97307.json",
+					"name" : "LabSDA_conexiune",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_echipa::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_echipa-Debug-82af3a0846a2aa4d0a7e.json",
+					"name" : "LabSDA_echipa",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_ex1P1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_ex1P1-Debug-e5be9e7a8c0a041f4f88.json",
+					"name" : "LabSDA_ex1P1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_generareCuvinte::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_generareCuvinte-Debug-d8bb37111d41f4686f6c.json",
+					"name" : "LabSDA_generareCuvinte",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_hartaCulori::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_hartaCulori-Debug-79e0726a6098bcc26e2a.json",
+					"name" : "LabSDA_hartaCulori",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_listeGPS::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_listeGPS-Debug-82bca7eccb7d2ab70913.json",
+					"name" : "LabSDA_listeGPS",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_magazine::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_magazine-Debug-6a19585f5d84becd00b8.json",
+					"name" : "LabSDA_magazine",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_main2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_main2-Debug-e9dc936682d38c0d4ed5.json",
+					"name" : "LabSDA_main2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_main3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_main3-Debug-ff75ed9ca373ac68f0a1.json",
+					"name" : "LabSDA_main3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_multiDepozite::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_multiDepozite-Debug-8b543210a8d10c023951.json",
+					"name" : "LabSDA_multiDepozite",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_practiceLists::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_practiceLists-Debug-cb968acf85b89d91a8d9.json",
+					"name" : "LabSDA_practiceLists",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_sortareNeg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_sortareNeg-Debug-27a5cfdde549e0912c47.json",
+					"name" : "LabSDA_sortareNeg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_student::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_student-Debug-f3550a92f71c20f45e6d.json",
+					"name" : "LabSDA_student",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_test-Debug-85579e6e5484a6635624.json",
+					"name" : "LabSDA_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_vpl3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_vpl3-Debug-a104b56041176270005a.json",
+					"name" : "LabSDA_vpl3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_vpl4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_vpl4-Debug-11f63bea740e369aea90.json",
+					"name" : "LabSDA_vpl4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LabSDA_zbor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LabSDA_zbor-Debug-c76018d7216e38ff0548.json",
+					"name" : "LabSDA_zbor",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Adi/CLionProjects/LabSDA/cmake-build-debug",
+		"source" : "C:/Users/Adi/CLionProjects/LabSDA"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

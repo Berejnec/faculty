@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\LabSDA_VPLrecursivitate.dir/objects.a
+C:\MinGW\bin\ar.exe qc CMakeFiles\LabSDA_VPLrecursivitate.dir/objects.a @CMakeFiles\LabSDA_VPLrecursivitate.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\LabSDA_VPLrecursivitate.dir/objects.a -Wl,--no-whole-archive -o LabSDA_VPLrecursivitate.exe -Wl,--out-implib,libLabSDA_VPLrecursivitate.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\LabSDA_VPLrecursivitate.dir\linklibs.rsp

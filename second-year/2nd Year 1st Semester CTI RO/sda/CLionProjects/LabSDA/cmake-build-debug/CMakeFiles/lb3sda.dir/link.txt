@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\lb3sda.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\lb3sda.dir/objects.a @CMakeFiles\lb3sda.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\lb3sda.dir/objects.a -Wl,--no-whole-archive -o lb3sda.exe -Wl,--out-implib,liblb3sda.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\lb3sda.dir\linklibs.rsp

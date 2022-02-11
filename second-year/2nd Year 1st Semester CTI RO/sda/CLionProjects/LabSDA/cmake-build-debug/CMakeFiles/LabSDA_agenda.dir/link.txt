@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\LabSDA_agenda.dir/objects.a
+C:\MinGW\bin\ar.exe qc CMakeFiles\LabSDA_agenda.dir/objects.a @CMakeFiles\LabSDA_agenda.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\LabSDA_agenda.dir/objects.a -Wl,--no-whole-archive -o LabSDA_agenda.exe -Wl,--out-implib,libLabSDA_agenda.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\LabSDA_agenda.dir\linklibs.rsp
